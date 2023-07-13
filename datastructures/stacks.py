@@ -27,7 +27,27 @@ class Stack:
             stacks.append('None')
             return "->".join(stacks)
     
+    def pop(self):
+        removed_item = self.head.data
+        self.head = self.head.next
+        return removed_item
 
+    def push(self, data):
+        new_stack_item = StackObject(data=data) 
+        if self.head is None:
+            self.head = new_stack_item
+            return None
+        previous_head = self.head
+        self.head = new_stack_item
+        new_stack_item.next = previous_head
+    
 new_stack = Stack([4,6,1,8,2,0])
 
+print(new_stack)
+
+new_stack.pop()
+new_stack.pop()
+new_stack.push(7)
+new_stack.push(5)
+new_stack.push(12)
 print(new_stack)
