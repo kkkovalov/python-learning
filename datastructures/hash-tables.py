@@ -6,12 +6,13 @@ class HashTable:
         self.size = 0
         self.buckets = [None] * self.capacity
     
-    def hash(self, key):
-        hashsum = 0
-        for idx, c in enumerate(key):
-            hashsum+=(idx + len(key)) ** ord(c)
-            hashsum = hashsum % self.capacity
-        return hashsum
+    def c_hash(self, key):
+        return hash(key)
+        # hashsum = 0
+        # for idx, c in enumerate(key):
+        #     hashsum+=(idx + len(key)) ** ord(c)
+        #     hashsum = hashsum % self.capacity
+        # return hashsum
     
     def insert(self, key, value):
         self.size+=1
