@@ -6,7 +6,7 @@ class Person:
         self.greeting()
         
     def greeting(self):
-        print("Welcome to the club,", self.name)    
+        print("Welcomse to the club,", self.name)    
         return None
         
     def getAge(self):

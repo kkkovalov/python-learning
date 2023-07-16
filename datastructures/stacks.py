@@ -1,4 +1,14 @@
 class StackObject:
+    
+    """
+    Testing the stack object/node
+    
+    >>> node = StackObject(1)
+    >>> print(node.next)
+    None
+    
+    """
+    
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -41,13 +51,7 @@ class Stack:
         self.head = new_stack_item
         new_stack_item.next = previous_head
     
-new_stack = Stack([4,6,1,8,2,0])
-
-print(new_stack)
-
-new_stack.pop()
-new_stack.pop()
-new_stack.push(7)
-new_stack.push(5)
-new_stack.push(12)
-print(new_stack)
+    
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
