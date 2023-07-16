@@ -1,3 +1,5 @@
+# use --maxfail <number_of_max_fails> to stop the test after the number is reached
+
 import pytest
 
 def add_three(n):
@@ -28,3 +30,16 @@ def input_value():
 def test_divis_by_3(input_value):
     assert input_value % 3 == 0
     
+
+# Parametrize mark used for testing agains multiple inputs that are stored in list, and tuple format
+
+@pytest.mark.parametrize('num, output', [(1,11), (2, 22), (3, 33), (4,45)])
+def test_multiply(num, output):
+    assert num * 11 == output
+
+# XFAIL or SKIP for test that are currently not used
+
+# @pytest.mark.xfail
+@pytest.mark.skip
+def test_minus(num):
+    assert 11 - 4 == 3
