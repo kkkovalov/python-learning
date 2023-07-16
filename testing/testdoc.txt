@@ -1,0 +1,15 @@
+The ``testdoc`` module
+======================
+
+Using ``count_vowels``
+-------------------
+
+This is an example text file in reStructuredText format.  First import
+``count_vowels`` from the ``doctests`` module:
+
+    >>> from doctests import count_vowels
+
+    >>> count_vowels('Aaron')
+    3
+    >>> count_vowels('Iran')
+    2

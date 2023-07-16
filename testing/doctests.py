@@ -14,11 +14,12 @@ def count_vowels(word: str):
     
     """
     from re import search as regex
-    total_count = len([x for x in str(word) if regex("[aAeEuUiIoO]", x)])
+    total_count = len([x for x in str(word).lower() if regex("[aeuio]", x)])
     return total_count
 
-print(count_vowels('aeyuio'))
+# print(count_vowels('aeyuio'))
 
 if __name__ == "__main__":
     import doctest
-    doctest.testmod()
+    # doctest.testmod()
+    doctest.testfile("testdoc.txt")
